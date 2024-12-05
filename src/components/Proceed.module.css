@@ -92,7 +92,7 @@
   
 @media only screen and (max-width: 32.25em) {
   .modal {
-    height: 25%;
+    height: 30%;
     width: 75%;
     background-color: white;
     z-index: 2;
