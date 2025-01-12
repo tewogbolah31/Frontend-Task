@@ -1,106 +1,104 @@
-.main{
-    height: 90vh;
-    background-color: #F5F3FF;
+.main {
+  height: 90vh;
+  background-color: #f5f3ff;
 }
 
-.box{ 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    color:  #4A4A68;
-    margin-top: 2rem;
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #4a4a68;
+  margin-top: 2rem;
 }
 
-.h2{
-   margin-bottom: .5rem;
-    color: black;
-    font-size: 2rem;
+.h2 {
+  margin-bottom: 0.5rem;
+  color: black;
+  font-size: 2rem;
 }
 
-.paragraph{
-    font-size: 1.5rem;
-    line-height: 1.6rem;
+.paragraph {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
 }
-
 
 .person {
-    height: 150px;
-    border-radius: 10px;
+  height: 150px;
+  border-radius: 10px;
 }
 
-.select{
-    margin: 2rem 0rem;
-    display: flex;
+.select {
+  margin: 2rem 0rem;
+  display: flex;
 }
 
 .upload {
-    width: 22rem;
-    height: 14rem;
-    border: .1rem solid #6a0dad;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #6a0dad;
-    cursor: pointer;
-  }
-
-  .uploaded{ 
-    width: 22rem;
-    height: 14rem;
-    border: .3rem solid #FF0000;
-    border-radius: 5px;
-    font-size: 13px;
-    color: #6a0dad;
-    cursor: pointer;
-    z-index: 0;
-    position: relative;
-  }
-
-  .dictected{
-    z-index: 1;
-    position: absolute;
-    top: 1%;
-    left: 2%;
-    color: white;
-    background-color: #FF0000;
-    padding: .2rem .4rem;
-    padding-left: 1rem;
-    border-radius: .5rem;
-  }
-
-  .upload input[type="image"] {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-  }
-
-  .button{
-    padding: 1rem 1.2rem;
-    background-color: #755AE2;
-    color: white;
-    border-radius: .5rem;
-    font-size: 1.2rem;
-    border: none;
-    outline: none;
-    cursor:   pointer;
+  width: 22rem;
+  height: 14rem;
+  border: 0.1rem solid #6a0dad;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #6a0dad;
+  cursor: pointer;
 }
 
-.img{
-    height: 100%;
-    width: 100%;
+.uploaded {
+  width: 22rem;
+  height: 14rem;
+  border: 0.3rem solid #ff0000;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #6a0dad;
+  cursor: pointer;
+  z-index: 0;
+  position: relative;
 }
 
-  
+.dictected {
+  z-index: 1;
+  position: absolute;
+  top: 1%;
+  left: 2%;
+  color: white;
+  background-color: #ff0000;
+  padding: 0.2rem 0.4rem;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+}
+
+.file {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.button {
+  padding: 1rem 1.2rem;
+  background-color: #755ae2;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
 @media only screen and (max-width: 32.25em) {
-  .main{
+  .main {
     height: 0;
   }
 
-  .box{ 
+  .box {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -108,7 +106,7 @@
     background-color: white;
     padding: 2rem;
     border-radius: 1rem;
-    color:  #4A4A68;
+    color: #4a4a68;
     margin-top: 2rem;
-}
+  }
 }

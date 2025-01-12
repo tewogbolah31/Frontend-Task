@@ -1,14 +1,15 @@
 import { useState } from "react";
 import styles from "../components/Header.module.css";
 import IconList from "./IconList";
-import img from "../assets/person.jpg";
 
 function Header({ onChange, displayDetected }) {
-  const [switchIcon, setSwitchIcon] = useState(false);
+  const [fileImage, setFileImage] = useState(null);
 
-  function onSwicth() {
-    setSwitchIcon(true);
+  function onSwitch(event) {
+    setFileImage(URL.createObjectURL(event.target.files[0]));
   }
+
+  function OnProceed() {}
 
   return (
     <main className={styles.main}>
@@ -28,23 +29,19 @@ function Header({ onChange, displayDetected }) {
         </p>
         <div className={styles.select}>
           <div className={displayDetected ? styles.uploaded : styles.upload}>
-            {!switchIcon && (
-              <input
-                type="image"
-                accept="image/png, image/jpeg"
-                onClick={onSwicth}
-              />
+            {!fileImage && (
+              <input type="file" onChange={onSwitch} className={styles.file} />
             )}
-            {switchIcon && <img src={img} className={styles.img} />}
+           {fileImage && <img src={fileImage} className={styles.img} /> }
             {displayDetected && (
               <span className={styles.dictected}>Desktop detected</span>
             )}
           </div>
-          <IconList first={switchIcon} />
+          <IconList first={fileImage} />
         </div>
         <button
           className={styles.button}
-          onClick={!switchIcon ? onSwicth : onChange}
+          onClick={!fileImage ? OnProceed : onChange}
           disabled={displayDetected}
         >
           Take picture and continue
@@ -52,6 +49,21 @@ function Header({ onChange, displayDetected }) {
       </div>
     </main>
   );
+
+  // const [image, setImage] = useState(null)
+
+  // const onImageChange = (event) => {
+  //  if (event.target.files && event.target.files[0]) {
+  //    setImage(URL.createObjectURL(event.target.files[0]));
+  //  }
+  // }
+
+  // return (
+  //   <div>
+  //     <input type="file" onChange={onImageChange} className="filetype" />
+  //     <img alt="preview image" src={image} />
+  //   </div>
+  // )
 }
 
 export default Header;
